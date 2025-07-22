@@ -1,0 +1,26 @@
+# Customer Who Is Not Referred by Customer with id = 2
+
+
+
+This SQL query returns the names of customers who are either:
+- Not referred by anyone (`referee_id IS NULL`), or
+- Referred by a customer other than the one with `id = 2`.
+
+
+
+ Table: Customer
+
+| Column      | Type    |
+|-------------|---------|
+| id          | int     |
+| name        | varchar |
+| referee_id  | int     |
+
+
+
+ SQL Solution
+
+
+SELECT name
+FROM Customer
+WHERE referee_id IS NULL OR referee_id != 2;
