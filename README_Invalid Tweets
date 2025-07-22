@@ -1,0 +1,19 @@
+ Invalid Tweets
+
+This SQL solution filters out tweets that are invalid based on their content length. A tweet is considered invalid if the content length is strictly greater than 15 characters.
+
+ Problem Statement
+
+Given a `Tweets` table with each tweet's ID and content, return the `tweet_id` of tweets that have content longer than 15 characters.
+
+
+Tweets
+
+| Column Name | Type     |
+|-------------|----------|
+| tweet_id    | int (PK) |
+| content     | varchar  |
+
+- `tweet_id` is the primary key.
+- `content` includes alphanumeric characters, `'!'`, and spaces only.
+
