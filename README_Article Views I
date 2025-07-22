@@ -1,0 +1,21 @@
+Authors Who Viewed Their Own Articles
+
+This SQL query solves a LeetCode problem where we are given a `Views` table containing data about which users viewed which articles.
+
+Problem Statement
+
+Each row in the `Views` table shows an article ID, the author who wrote it, the viewer who viewed it, and the date it was viewed.
+We are asked to find all authors who have viewed at least one of their own articles(i.e., where `author_id = viewer_id`).
+
+ Table 
+
+| Column Name | Type |
+|-------------|------|
+| article_id  | int  |
+| author_id   | int  |
+| viewer_id   | int  |
+| view_date   | date |
+
+ Note: No primary key. The table may contain duplicate rows.
+
+
