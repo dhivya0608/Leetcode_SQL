@@ -1,0 +1,26 @@
+ SQL Query: Match Employees with Unique ID
+
+This project contains an SQL solution for joining two tables: `Employees` and `EmployeeUNI`. The goal is to list all employees and their corresponding `unique_id`. If an employee does not have a `unique_id`, we return `NULL`.
+
+Employees
+
+| Column Name | Type    |
+|-------------|---------|
+| id          | int     |
+| name        | varchar |
+
+- `id` is the primary key for this table.
+
+EmployeeUNI
+
+| Column Name | Type |
+|-------------|------|
+| id          | int  |
+| unique_id   | int  |
+
+ `(id, unique_id)` is the primary key (composite).
+
+ Problem Statement
+
+Write an SQL query to show the `unique_id` of each user. If a user does not have a `unique_id`, return `NULL`.
+
