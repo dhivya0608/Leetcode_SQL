@@ -1,0 +1,42 @@
+ Customers Without Transactions
+
+This SQL project identifies customers who visited a mall but did not make any transactions. The goal is to count how many such visits occurred for each customer.
+
+
+
+ Problem Statement
+
+Given two tables:
+
+ 1. Visits
+
+| Column Name | Type |
+|-------------|------|
+| visit_id    | int  |
+| customer_id | int  |
+
+- `visit_id` is the primary key.
+- This table contains a record of each customer’s visit to the mall.
+
+ 2. Transactions
+
+| Column Name    | Type |
+|----------------|------|
+| transaction_id | int  |
+| visit_id       | int  |
+| amount         | int  |
+
+- `transaction_id` is the primary key.
+- This table contains transactions made during visits.
+
+Objective
+
+Write an SQL query to find:
+- `customer_id`
+- `count_no_trans` — the number of visits without any transactions
+
+Return the result in any order.
+
+
+
+
