@@ -1,0 +1,35 @@
+ SQL Query: Product Sales Report
+
+This project contains an SQL solution to generate a sales report by joining the `Sales` and `Product` tables. The goal is to display the `product_name`, `year`, and `price` for each sale.
+
+ Table Schemas
+
+ Product Table
+
+| Column Name  | Type    |
+|--------------|---------|
+| product_id   | int     |
+| product_name | varchar |
+
+- `product_id` is the primary key
+
+Sales Table
+
+| Column Name | Type  |
+|-------------|-------|
+| sale_id     | int   |
+| product_id  | int   |
+| year        | int   |
+| quantity    | int   |
+| price       | int   |
+
+- `(sale_id, year)` is the composite primary key.
+- `product_id` is a foreign key referencing the `Product` table.
+- `price` is per unit.
+
+ Problem Statement
+
+Write an SQL query to report the `product_name`, `year`, and `price` for each `sale_id` in the `Sales` table.
+
+
+
