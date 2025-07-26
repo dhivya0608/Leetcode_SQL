@@ -1,0 +1,19 @@
+Factory Machine Process Time Analysis
+
+ Problem Description
+
+This project analyzes activity logs from a factory website to compute the average processing time for each machine. Each machine runs multiple processes, and for each process, we are provided with a `start` and an `end` timestamp.
+
+The goal is to calculate the **average time each machine takes to complete a process**, rounded to 3 decimal places.
+
+ Table: `Activity`
+
+| Column Name   | Type    | Description                                      |
+|---------------|---------|--------------------------------------------------|
+| machine_id    | int     | ID of the machine                                |
+| process_id    | int     | ID of the process on the machine                 |
+| activity_type | enum    | Either 'start' or 'end'                          |
+| timestamp     | float   | Time in seconds when the activity occurred       |
+
+- Composite Primary Key: `(machine_id, process_id, activity_type)`
+- Each `(machine_id, process_id)` pair has exactly one `'start'` and one `'end'`.
