@@ -1,0 +1,50 @@
+SQL Query: Find Dates with Higher Temperatures than the Previous Day
+ Problem Statement
+
+Given a table `Weather` that contains daily temperature records, write a SQL query to find the `id`s of all dates where the temperature was higher than the previous day's temperature.
+
+### Table: `Weather`
+
+| Column Name   | Type    |
+|---------------|---------|
+| id            | int     |
+| recordDate    | date    |
+| temperature   | int     |
+
+- `id` is the unique identifier for each record.
+- Each `recordDate` is unique (no duplicates).
+- The table stores temperature data for specific dates.
+
+
+
+ Objective
+
+Return the `id`s of all records where the temperature is higher than the previous day.
+
+
+
+ Sample Input
+
+| id | recordDate | temperature |
+|----|------------|-------------|
+| 1  | 2015-01-01 | 10          |
+| 2  | 2015-01-02 | 25          |
+| 3  | 2015-01-03 | 20          |
+| 4  | 2015-01-04 | 30          |
+
+
+
+ Expected Output
+
+| id |
+|----|
+| 2  |
+| 4  |
+
+ Explanation:
+
+- `2015-01-02`: 25 > 10 → higher than previous day 
+- `2015-01-03`: 20 < 25 
+- `2015-01-04`: 30 > 20 
+
+
